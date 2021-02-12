@@ -1,0 +1,96 @@
+#navegacion{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+#btn-filtro, #btn-buscar, #input-buscar{
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#btn-filtro, #btn-buscar{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    border: 1px solid #02318D;
+}
+
+#btn-buscar:hover, #btn-filtro:hover{
+    background-color: #02318D;
+    color: white;
+}
+
+
+#input-buscar{
+    width: 500px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 1px solid #02318D;
+}
+
+#nav-div{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#nav-enlaces{
+    background-color:#214e9b;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#nav-marca, #nav-buscar, #nav-compras{
+    margin: auto;
+}
+
+#img-logo{
+    height: 50px;
+    width: 150px;
+    padding: auto;
+}
+
+#content-categorias{
+    display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+    height: 0;
+    overflow: hidden;
+    transition: .04s;
+}
+
+#enlace-categoria{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+#enlace-categoria:hover{
+    color: #dbac11;
+}
+
+#btn-menu{
+    display: inline-block;
+}
+
+.input-check{
+    display: none;
+}
+#btn-menu::after{
+    color: white;
+    content: 'Productos';
+}
+
+#btn-menu:hover{
+    color: #DD010B;
+}
+
+#cb-categoria:checked ~  #content-categorias{
+    height: 100%;
+}
