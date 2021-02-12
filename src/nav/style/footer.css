@@ -1,4 +1,4 @@
-footer{
+#footer-index{
     background-color:#214e9b;
     color: white;
     padding-top: 20px;
@@ -6,4 +6,15 @@ footer{
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+}
+
+#footer-enlaces{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#enlace-fot{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
 }
