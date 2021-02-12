@@ -1,7 +1,7 @@
 <nav id="navegacion">
     <div id="nav-div">
         <div id="nav-marca">
-            <a id="enlace-menu"href=""><img id="img-logo"src="img/logo.jpg" alt="logo"></a>
+            <a id="enlace-menu"href="index.php"><img id="img-logo"src="img/logo.jpg" alt="logo"></a>
         </div>
        
         <div id="nav-buscar">
