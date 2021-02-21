@@ -4,8 +4,8 @@
         private $bd;
 
         public function __construct() {
-            $this -> bd = new mysqli(SERVIDOR, USUARIO, CLAVE, BDD);
-            $this -> bd -> set_charset('utf8');
+            $this->bd = new mysqli(SERVIDOR, USUARIO, CLAVE, BDD);
+            $this->bd->set_charset('utf8');
         }
 
         #Funcion agregar USUARIOS
@@ -27,6 +27,12 @@
         #Funcion consultar CLIENTES
         #Funcion editar CLIENTES
         #Funcion eliminar CLIENTES
+
+        #Funcion consultar CATEGORIAS
+        public function ConsultarCategorias(){
+            $resultado = $this->bd->query("SELECT * FROM categoria");
+            return $resultado;
+        }
     }
 
 ?>

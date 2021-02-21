@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="src/style/index.css">
 </head>
 <body>
+<?php 
+    require_once 'config/conexion.php';
+    require_once 'config/sql_class.php';
+
+    $cat_class = new sql_class();
+    $result_cat = $cat_class->ConsultarCategorias();
+?>
     <!--navegacion-->
     <?php
     require_once 'src/nav/menu.php'
@@ -19,6 +26,7 @@
     <br>
 
     <div id="contenedor">
+
         <div id="promociones">
             <h1>PROMOCIONES</h1>
         </div>
