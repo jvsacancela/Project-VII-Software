@@ -33,6 +33,12 @@
             $resultado = $this->bd->query("SELECT * FROM categoria");
             return $resultado;
         }
+
+        #Funcion consultar PRODUCTOS
+        public function ConsultarProductos(){
+            $resultado = $this->bd->query("SELECT * FROM producto");
+            return $resultado;
+        }
     }
 
 ?>
