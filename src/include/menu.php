@@ -1,7 +1,7 @@
 <nav id="navegacion">
     <div id="nav-div">
         <div id="nav-marca">
-            <a id="enlace-menu"href="../../../index.php"><img id="img-logo"src="img/logo.jpg" alt="logo"></a>
+            <a id="enlace-menu"href="index.php"><img id="img-logo"src="src/assets/img/logo.jpg" alt="logo"></a>
         </div>
        
         <div id="nav-buscar">
@@ -25,7 +25,7 @@
         <?php while($display = $result_cat->fetch_assoc()){ ?>
 
         <div id="content-categorias" class="content">
-            <p><a id="enlace-categoria" href="src/pages/producto/page-productos.php">  <?php echo $display['nombreCategoria'];  ?>  </a> </p>
+            <p><a id="enlace-categoria" href="page-productos.php">  <?php echo $display['nombreCategoria'];  ?>  </a> </p>
         </div>
 
         <?php } ?>

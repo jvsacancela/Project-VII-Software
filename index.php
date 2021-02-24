@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMPORTADORA MENDEZ | IMPORTADORES POR EXCELENCIA</title>
     <!--estilos-->
-    <link rel="stylesheet" href="src/style/general.css">
-    <link rel="stylesheet" href="src/nav/style/menu.css">
-    <link rel="stylesheet" href="src/nav/style/footer.css">
-    <link rel="stylesheet" href="src/style/index.css">
+    <link rel="stylesheet" href="src/assets/style/general.css">
+    <link rel="stylesheet" href="src/assets/style/menu.css">
+    <link rel="stylesheet" href="src/assets/style/footer.css">
+    <link rel="stylesheet" href="sr/assets/style/index.css">
 </head>
 <body>
 <?php 
@@ -21,7 +21,7 @@
 ?>
     <!--navegacion-->
     <?php
-    require_once 'src/nav/menu.php'
+    require_once 'src/include/menu.php'
     ?>
     <br>
 
@@ -35,7 +35,7 @@
     <br>
     <!--footer-->
     <?php
-    require_once 'src/nav/footer.php'
+    require_once 'src/include/footer.php'
     ?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 
-    require_once '../../../config/conexion.php';
-    require_once '../../../config/sql_class.php';
+    require_once 'config/conexion.php';
+    require_once 'config/sql_class.php';
 
     $cat_class = new sql_class();
     $result_cat = $cat_class->ConsultarCategorias();
@@ -13,14 +13,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS</title>
-    <link rel="stylesheet" href="../../../src/style/general.css">
-    <link rel="stylesheet" href="../../nav/style/menu.css">
-    <link rel="stylesheet" href="../../nav/style.page-productos.css">
+    <link rel="stylesheet" href="src/assets/style/general.css">
+    <link rel="stylesheet" href="src/assets/style/menu.css">
+    <link rel="stylesheet" href="src/assets/style/page-productos.css">
+    <link rel="stylesheet" href="src/assets/style/footer.css">
 </head>
 <body>
 
     <?php 
-       require_once '../../nav/menu.php';
+       require_once 'src/include/menu.php';
     ?>
 
     <div id="contenedor">
@@ -32,4 +33,8 @@
         </div>
     </div>
 </body>
+
+    <?php
+        require_once 'src/include/footer.php'
+    ?>
 </html>
