@@ -3,8 +3,9 @@
     require_once 'config/conexion.php';
     require_once 'config/sql_class.php';
 
-    $cat_class = new sql_class();
-    $result_cat = $cat_class->ConsultarCategorias();
+    $res_class = new sql_class();
+    $result_cat = $res_class->ConsultarCategorias();
+    $result_pro = $res_class->ConsultarProductos();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +27,15 @@
 
     <div id="contenedor">
         <div id="productos">
-            <?php while($display = $result_cat->fetch_assoc()){?>
-                <h3><?php echo $display['nombreCategoria'];  ?></h3>
+            <?php while($display = $result_pro->fetch_assoc()){?>
+            <div id="tarjeta-producto">
+                <img id='foto-producto'src="" alt="Foto del Producto">
+                <h3 id='precio-producto'>$<?php echo $display['precioProducto'];  ?></h3>
+                <h3 id='nombre-producto'><?php echo $display['nombreProducto'];  ?></h3>
+                <p id='descipcion-producto'><?php echo $display['descripcionProducto'];  ?></p>
+                <h3 id='marca-producto'><?php echo $display['marcaProducto'];  ?></h3>
             <?php } ?>
+            </div>
 
         </div>
     </div>
