@@ -19,6 +19,13 @@
             $resultado = $this->bd->query("SELECT * FROM usuario");
             return $resultado;
         }
+
+        #Funcion consultar USUARIOS PASSWORD
+        public function ConsultarUsuariosPass($user, $contrasena){
+            $resultado = $this->bd->query("SELECT * FROM usuario
+                                            WHERE nombreUsuario = '$user' AND contrasenaUsuario = '$contrasena'");
+            return $resultado;
+        }
         #Funcion editar USUARIOS
         #Funcion eliminar UUSARIOS
 
