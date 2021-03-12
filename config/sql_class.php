@@ -41,10 +41,22 @@
             return $resultado;
         }
 
+        #Funcion agregar CATEGORIAS
+        public function AgregarCategorias($cat_cod, $cat_nom){
+            $resultado = $this->bd->query("INSERT INTO categoria (codigoCategoria, nombreCategoria) VALUES ('$cat_cod','$cat_nom')");
+            return true;
+        }
+
         #Funcion consultar PRODUCTOS
         public function ConsultarProductos(){
             $resultado = $this->bd->query("SELECT * FROM producto");
             return $resultado;
+        }
+
+        #Funcion agregar PRODUCTOS
+        public function AgregarProductos($pro_cod, $pro_nom, $pro_mar, $pro_des, $pro_pre, $pro_can, $pro_cat, $pro_img){
+            $resultado = $this->bd->query("INSERT INTO producto (codigoProducto, nombreProducto, marcaProducto, descripcionProducto, precioProducto, cantidadProducto, CATEGORIA_codigoCategoria, fotoProducto) VALUES ('$pro_cod', '$pro_nom', '$pro_mar', '$pro_des', '$pro_pre', '$pro_can', '$pro_cat', '$pro_img')");
+            return true;
         }
     }
 
