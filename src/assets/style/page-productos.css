@@ -1,7 +1,6 @@
 #productos{
     display: grid;
     grid-template-columns: auto auto auto;
-    border: 1px solid red;
 }
 
 #tarjeta-producto{
@@ -43,10 +42,12 @@
     background-color: #02318D;
     color: white;
     border: none;
-    font-size: 17px;;
+    font-size: 17px;
+    text-decoration: none;
 }
 
 #btn-add-cart:hover{
     color: white;
     background-color: #DD010B;
+    
 }

@@ -54,9 +54,45 @@
         }
 
         #Funcion agregar PRODUCTOS
-        public function AgregarProductos($pro_cod, $pro_nom, $pro_mar, $pro_des, $pro_pre, $pro_can, $pro_cat, $pro_img){
-            $resultado = $this->bd->query("INSERT INTO producto (codigoProducto, nombreProducto, marcaProducto, descripcionProducto, precioProducto, cantidadProducto, CATEGORIA_codigoCategoria, fotoProducto) VALUES ('$pro_cod', '$pro_nom', '$pro_mar', '$pro_des', '$pro_pre', '$pro_can', '$pro_cat', '$pro_img')");
+        public function AgregarProductos($pro_cod, $pro_nom, $pro_mar, $pro_des, $pro_pre, $pro_can, $pro_cat, $pro_fot){
+            $resultado = $this->bd->query("INSERT INTO producto (codigoProducto, nombreProducto, marcaProducto, descripcionProducto, precioProducto, cantidadProducto, CATEGORIA_codigoCategoria, fotoProducto) VALUES ('$pro_cod', '$pro_nom', '$pro_mar', '$pro_des', '$pro_pre', '$pro_can', '$pro_cat', '$pro_fot')");
             return true;
+        }
+
+        #Funcion eliminar CATEGORIA
+        public function EliminarCategoria($cod_cat){
+            $resultado = $this->bd->query("DELETE FROM categoria WHERE codigoCategoria = '$cod_cat'");
+            return true;
+        }
+
+        #Funcion consultar ID CATEGORIA
+        public function ConsultarIdCategoria($cod_cat){
+            $resultado = $this->bd->query("SELECT * FROM categoria WHERE codigoCategoria = '$cod_cat'");
+            return $resultado;
+        }
+
+        #Funcion actualizar CATEGORIA
+        public function ActualizarCategoria($cod_cat, $nom_cat){
+            $resultado = $this->bd->query("UPDATE categoria SET codigoCategoria = '$cod_cat', nombreCategoria = '$nom_cat' WHERE codigoCategoria = '$cod_cat'");
+            return $resultado;
+        }
+
+        #Funcion eliminar PRODUCTO
+        public function EliminarProducto($cod_pro){
+            $resultado = $this->bd->query("DELETE FROM producto WHERE codigoProducto = '$cod_pro'");
+            return true;
+        }
+
+        #Funcion consultar ID PRODUCTO
+        public function ConsultarIdProducto($cod_pro){
+            $resultado = $this->bd->query("SELECT * FROM producto WHERE codigoProducto = '$cod_pro'");
+            return $resultado;
+        }
+
+        #Funcion actualizar PRODUCTO
+        public function ActualizarProducto($pro_cod, $pro_nom, $pro_mar, $pro_des, $pro_pre, $pro_can, $pro_cat, $pro_fot){
+        $resultado = $this->bd->query("UPDATE producto SET codigoProducto = '$pro_cod', nombreProducto = '$pro_nom', marcaProducto = '$pro_mar',descripcionProducto = '$pro_des', precioProducto = '$pro_pre', cantidadProducto = '$pro_can', CATEGORIA_codigoCategoria = '$pro_cat', fotoProducto = '$pro_fot' WHERE codigoProducto = '$pro_cod'");
+            return $resultado;
         }
     }
 

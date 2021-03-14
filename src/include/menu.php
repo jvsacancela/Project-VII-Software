@@ -1,3 +1,5 @@
+<!--LIBRERIA PARA FUENTES-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <nav id="navegacion">
     <div id="nav-div">
         <div id="nav-marca">
@@ -7,11 +9,12 @@
         <div id="nav-buscar">
             <input id="btn-filtro" type="button" value="Filtro">
             <input id="input-buscar" type="text">
-            <input id="btn-buscar" type="button" value="Buscar">
+            <button id="btn-buscar">Buscar <i class="fa fa-search"></i></button>
         </div>
 
         <div id="nav-compras">
-        <p>Carrito de compras aqui</p>
+            <a href="src/pages/page-cart.php"><i class="fa fa-shopping-cart" id="cart"></i></a>
+            <div id="contador"><span id="cont">9</span></div>
         </div>
            
     </div>

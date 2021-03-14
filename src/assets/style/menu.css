@@ -94,3 +94,35 @@
 #cb-categoria:checked ~  #content-categorias{
     height: 100%;
 }
+
+#cart{
+    color: #DD010B;
+    font-size: 30px;
+}
+
+#contador{
+    border: 1px solid #DD010B;
+    background-color: #DD010B;
+    border-radius: 100px;
+    display: grid;
+    margin: auto;
+    width: 22px;
+    height: 22px;
+    
+    color : white;
+}
+
+#cont{
+    display: block;
+    margin: auto;
+    font-size: 14px;
+}
+
+#nav-compras{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#spp{
+    text-decoration: none;
+}

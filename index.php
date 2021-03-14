@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/assets/style/menu.css">
     <link rel="stylesheet" href="src/assets/style/footer.css">
     <link rel="stylesheet" href="sr/assets/style/index.css">
+    
 </head>
 <body>
 <?php 
