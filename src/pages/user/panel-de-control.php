@@ -9,6 +9,10 @@
     $resultados_cat = $consulta_class-> ConsultarCategorias();
     $resultado_cat = $consulta_class-> ConsultarCategorias();
     $resultados_pro = $consulta_class-> ConsultarProductos();
+
+    if(!isset($_SESSION['nombreUsuario'])){
+        header ('Location: iniciar-usuario.php');
+    }
     
 ?>
 <!DOCTYPE html>
@@ -17,7 +21,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANEL DE CONTROL</title>
+    <title>PANEL DE CONTROL | IMPORTADORA MENDEZ</title>
     <link rel="stylesheet" href="../../assets/style/general.css ">
     <link rel="stylesheet" href="../../assets/style/panel-de-control.css">
     <!--LIBRERIA PARA ICONOS-->
@@ -51,7 +55,7 @@
                                         <td> <?php echo $display['codigoCategoria']?>  </td>
                                         <td> <?php echo $display['nombreCategoria'] ?> </td>
                                         <td>
-                                            <a href="php/edit_cat.php?id=<?php echo $display['codigoCategoria']?>"><i class="fa fa-edit" id="edit"></i></a>
+                                            <a  href="php/edit_cat.php?id=<?php echo $display['codigoCategoria']?>"><i class="fa fa-edit" id="edit"></i></a>
                                             <a href="php/delete_cat.php?id=<?php echo $display['codigoCategoria'] ?>"><i class="fa fa-trash" id="delete"></i></a>
                                         </td>
                                 <?php } ?>

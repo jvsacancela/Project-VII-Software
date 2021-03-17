@@ -1,0 +1,60 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+  text-align: center;
+   font-size: 25px;
+
+
+}
+h1:hover{
+    color: #02318d;
+    font-size: 35px;
+    transition-duration:  1050ms;
+}
+#seccion {
+  /* border: 1px solid orange;   */
+  padding: 20px;
+  margin: 25px;
+  display: grid;
+  grid-template-columns: 500px auto;
+}
+#seccion:hover{
+    box-shadow: 4px 4px 17px;
+    /* border: 1px solid #02318d; */
+    transition: 700ms;
+   
+}
+
+img:hover{
+    width: 500px;
+    height: 300px;
+    transition-duration:  1050ms;
+}
+
+p,.viñetas{
+    margin: 50px;
+    text-align:justify;
+    line-height: 25px;
+    font-size: 15px;
+  
+}
+
+#img,#info {
+
+    /* border: 1px solid red; */
+    margin: auto;
+    
+}
+#contenedor{
+    width: 80%;
+    margin: auto;
+}
+img{
+    width: 475px;
+    height: 275px;
+    border-radius: 50px;
+
+}

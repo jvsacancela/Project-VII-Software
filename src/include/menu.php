@@ -1,3 +1,4 @@
+
 <!--LIBRERIA PARA FUENTES-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <nav id="navegacion">
@@ -7,14 +8,14 @@
         </div>
        
         <div id="nav-buscar">
-            <input id="btn-filtro" type="button" value="Filtro">
-            <input id="input-buscar" type="text">
-            <button id="btn-buscar">Buscar <i class="fa fa-search"></i></button>
+            <form action="buscar.php" method="GET">
+            <input id="input-buscar" type="text" placeholder="Buscar..." name="texto"><i class="fa fa-search"></i>
+            </form>
         </div>
 
         <div id="nav-compras">
-            <a href="src/pages/page-cart.php"><i class="fa fa-shopping-cart" id="cart"></i></a>
-            <div id="contador"><span id="cont">9</span></div>
+            <a href="cart.php"><i class="fa fa-shopping-cart" id="cart"></i></a>
+            <div id="contador"><span id="cont"><?php echo 5;?></span></div>
         </div>
            
     </div>
@@ -28,7 +29,10 @@
         <?php while($display = $result_cat->fetch_assoc()){ ?>
 
         <div id="content-categorias" class="content">
-            <p><a id="enlace-categoria" href="page-productos.php">  <?php echo $display['nombreCategoria'];  ?>  </a> </p>
+            <p><a  id="enlace-categoria" href="page-productos.php?id=<?php echo $display['codigoCategoria']?><?php echo $display['nombreCategoria']?>"> 
+                 <?php echo $display['nombreCategoria']; ?> 
+                </a> 
+            </p>
         </div>
 
         <?php } ?>

@@ -48,6 +48,7 @@ a{
 table{
     margin: auto;
     text-align: center;
+    border-spacing: 0;
 }
 
 

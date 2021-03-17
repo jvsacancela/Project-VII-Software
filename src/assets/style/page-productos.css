@@ -48,6 +48,10 @@
 
 #btn-add-cart:hover{
     color: white;
-    background-color: #DD010B;
-    
+    background-color: #DD010B;   
+}
+
+#titul{
+    font-size: 25px;
+    color:#dd010c88
 }

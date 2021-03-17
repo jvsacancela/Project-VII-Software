@@ -71,6 +71,12 @@
             return $resultado;
         }
 
+        #Funcion consultar NOMBRE CATEGORIA
+        public function ConsultarCategotiaProducto($nom_cat){
+            $resultado = $this->bd->query("SELECT * FROM producto WHERE CATEGORIA_codigoCategoria = '$nom_cat'");
+            return $resultado;
+        }
+
         #Funcion actualizar CATEGORIA
         public function ActualizarCategoria($cod_cat, $nom_cat){
             $resultado = $this->bd->query("UPDATE categoria SET codigoCategoria = '$cod_cat', nombreCategoria = '$nom_cat' WHERE codigoCategoria = '$cod_cat'");
@@ -94,6 +100,26 @@
         $resultado = $this->bd->query("UPDATE producto SET codigoProducto = '$pro_cod', nombreProducto = '$pro_nom', marcaProducto = '$pro_mar',descripcionProducto = '$pro_des', precioProducto = '$pro_pre', cantidadProducto = '$pro_can', CATEGORIA_codigoCategoria = '$pro_cat', fotoProducto = '$pro_fot' WHERE codigoProducto = '$pro_cod'");
             return $resultado;
         }
-    }
 
+        #Funcion insertar VENTA
+        public function InsertarVenta($id, $id_usu, $tt, $fec){
+            $resultado = $this->bd->query("INSERT INTO venta (id, id_usuario, total, fecha) VALUES ('$id', '$id_usu', '$tt', $fec')");
+            return true;
+        }
+
+        #Funcion insertar PRODUCTOS VENTA
+        public function InsertarProductosVenta($id_ven, $id_pro, $can, $pre, $sub){
+            $resultado = $this->bd->query("INSERT INTO productos_venta (id_venta, id_producto, cantidad, precio, subtotal) VALUES ('$id_ven', '$id_pro', '$can', '$pre', '$sub')");
+            return true;
+        }
+
+        #Funcion buscar PRODUCTOS
+        public function BuscarProductos($nom_pro, $des_pro, $mar_pro){
+            $resultado = $this->bd->query("SELECT * FROM producto WHERE 
+            nombreProducto like '%$nom_pro%' or
+            descripcionProducto like '%$des_pro%' or
+            marcaProducto like '%$mar_pro%'");
+            return $resultado;
+        }
+    }
 ?>

@@ -1,7 +1,7 @@
 <footer id="footer-index">
     <div id="footer-enlaces">
         <div>
-            <p> <a id="enlace-fot" href="">Conocenos</a> </p>
+            <p> <a id="enlace-fot" href="page-conocer.html">Conocenos</a> </p>
         </div>
 
         <div>

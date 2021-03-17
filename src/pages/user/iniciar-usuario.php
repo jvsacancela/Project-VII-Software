@@ -10,12 +10,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIO DE SESION DE USUARIOS</title>
+    <title>LOGIN | IMPORTADORA MENDEZ</title>
+    <link rel="stylesheet" href="../../assets/style/general.css">
+    <link rel="stylesheet" href="../../assets/style/inicio-sesion.css">
 </head>
 <body>
 
     <form action="" method="POST">
         <div id="bordeLogin">
+            <div id="logotipo">
+            <img id="logo" src="../../assets/img/logo.jpg" alt="">
+            <h1>INGRESAR</h1>
+            </div>
+           
             <div id="cajaText">
                 <label for="txt-usuario">Usuario</label>
                 <input type="text" name="inputUser" autocomplete="off">
@@ -25,9 +32,9 @@
                 <label for="txt-contrasena">Contraseña</label>
                 <input type="password" name="inputPass" autocomplete="off">
             </div>
-        </div>
 
-        <button type="submit">Ingresar</button>
+            <button type="submit" id="btn-ingresar">Ingresar</button>
+        </div>
     </form>
     
 </body>

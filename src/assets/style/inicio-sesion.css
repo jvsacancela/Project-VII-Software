@@ -1,0 +1,67 @@
+#bordeLogin{
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid #214e9b;
+    box-shadow: 3px 3px 15px;
+    
+}
+
+#cajaText{
+    width: 450px;
+    display: grid;
+    margin: auto;
+    
+}
+
+label{
+    margin: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 18px;
+}
+
+input, select{
+    font-size: 18px;
+    margin: 5px;
+    padding: 9px;
+    border: 1px solid #214e9b
+}
+
+#btn-ingresar{
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 45px;
+    font-size: 22px;
+    border: none;
+    background-color:#214e9b;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  
+}
+
+#btn-ingresar:hover{
+    background-color: #02235e;
+}
+
+#logo{
+    width: 500px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+#logotipo{
+    text-align: center;
+    color: #214e9b;
+    padding-bottom: 20px;
+}

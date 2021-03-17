@@ -4,7 +4,6 @@
 
     $img_class = new sql_class();
 
-
     
     $resultado_fot = $img_class->ConsultarProductos();
 

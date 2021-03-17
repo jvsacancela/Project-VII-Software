@@ -1,0 +1,70 @@
+h1{
+    text-align: center;
+    padding: 20px;
+    color: #214e9b;
+}
+
+#content{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+table{
+    margin: auto;
+    text-align: center;
+    border-spacing: 0;
+}
+
+
+th, td{
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+th{
+    
+    background-color: #214e9b;
+    color: white
+}
+
+td{
+    border: 1px solid #214e9b7e;
+}
+
+#btn-comprar{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    background-color:#214e9b;
+    color: white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+#btn-comprar:hover{
+    background-color: #02235e;
+}
+
+#delete{
+    font-size: 20px;
+    color: #DD010B;
+}
+
+#delete:hover{
+    color: rgb(255, 174, 0);
+}
+
+#img-tab{
+    display: block;
+    width: 70px;
+    height: 80px;
+}
