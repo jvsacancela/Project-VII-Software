@@ -14,6 +14,17 @@ $total = 0;
 for($i=0; $i<count($arreglo); $i++){
 $total = $total + ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']);
 }
+
+$contrasena="";
+if(isset($_POST['contrasena'])){
+    if($_POST['contrasena']!=""){
+
+    }
+}
+
+
+
+
 $fecha = date('Y-m-d h:m:s');
 $consulta_venta = $cart_class-> InsertarVenta(1,$id,  $total, $fecha);
 
@@ -54,6 +65,9 @@ unset($_SESSION['car']);
     <?php 
      require_once 'src/include/footer.php'
     ?>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
 
 </body>
 </html>

@@ -2,8 +2,8 @@
 
     session_start();
     $arreglo = $_SESSION['car'];
-    for(=0; <count($arreglo);$i++){
-        if($arreglo[$i]['Codigo'] != $_POST['Codigo']){
+    for($i=0; $i<count($arreglo);$i++){
+        if($arreglo[$i]['Codigo'] != $_POST['id']){
             $arregloNuevo[] = array(
                 'Codigo' => $arreglo[$i]['Codigo'],
                 'Nombre' => $arreglo[$i]['Nombre'],
@@ -18,5 +18,5 @@
     }else{
         unset($_SESSION['car']);
     }
-    echo json_encode("listo");
+    echo "listo";
 ?>

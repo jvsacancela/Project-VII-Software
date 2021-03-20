@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2021 a las 06:41:37
+-- Tiempo de generación: 17-03-2021 a las 23:52:39
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -57,6 +57,21 @@ CREATE TABLE `cliente` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `envio`
+--
+
+CREATE TABLE `envio` (
+  `id_envio` int(11) NOT NULL,
+  `ciudad` varchar(100) NOT NULL,
+  `direccion` varchar(150) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `telefono` varchar(100) NOT NULL,
+  `id_venta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `factura`
 --
 
@@ -93,7 +108,12 @@ INSERT INTO `producto` (`codigoProducto`, `nombreProducto`, `descripcionProducto
 (2, 'Brochas', 'Juego de 4 brochas de maquillaje para ojos', 5.5, 40, 'Hudabeauty', 2, 'f02.jpg'),
 (3, 'Brocha', 'Perfecta para aplicar polvo suelto o polvo compacto', 3.55, 80, 'Hudabeauty', 2, 'f03.jpg'),
 (4, 'Tinta de labio', 'Tinta de labio', 1.75, 5000, 'Posie Tint', 2, 'f04.jpg'),
-(5, 'prueba', 'este es un producto', 50.5, 7000, 'prueba', 3, 'f05.jpg');
+(5, 'Uñas postisas', 'Uñas de acrilico', 11.25, 150, 'E&A', 2, 'i6.jpg'),
+(6, 'Polvo de maquillaje', 'Polvo compacto URBAN ', 15, 200, 'Urban', 2, 'i7.jpg'),
+(7, 'Respuesto de rizador ', 'Respuesto de rizador ', 2.5, 79, 'Jlash', 1, 'i8.jpg'),
+(8, 'Vincha', 'Vincha tipo lazo', 0.99, 300, 'New fashion', 1, 'i9.jpg'),
+(9, 'Arete', 'Arete tipo labial', 0.99, 400, 'New fashion', 1, 'i10.jpg'),
+(10, 'Diadema', 'Diadema de tela', 2.45, 152, 'Nacional', 1, 'i11.jpg');
 
 -- --------------------------------------------------------
 
@@ -141,7 +161,9 @@ INSERT INTO `productos_venta` (`id`, `id_venta`, `id_producto`, `cantidad`, `pre
 (24, 1, 1, 12, 0, 0),
 (25, 1, 1, 2, 5.5, 11),
 (26, 1, 1, 2, 0, 0),
-(27, 1, 1, 1, 50.5, 50.5);
+(27, 1, 1, 1, 50.5, 50.5),
+(28, 1, 1, 1, 5.5, 5.5),
+(29, 1, 1, 1, 1.75, 1.75);
 
 -- --------------------------------------------------------
 
@@ -215,6 +237,12 @@ ALTER TABLE `cliente`
   ADD UNIQUE KEY `username_UNIQUE` (`usuarioCliente`);
 
 --
+-- Indices de la tabla `envio`
+--
+ALTER TABLE `envio`
+  ADD PRIMARY KEY (`id_envio`);
+
+--
 -- Indices de la tabla `factura`
 --
 ALTER TABLE `factura`
@@ -262,10 +290,16 @@ ALTER TABLE `venta`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `envio`
+--
+ALTER TABLE `envio`
+  MODIFY `id_envio` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `productos_venta`
 --
 ALTER TABLE `productos_venta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`

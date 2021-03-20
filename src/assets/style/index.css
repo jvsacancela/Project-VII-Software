@@ -4,3 +4,29 @@
    background-color: orange;
     text-align: center;
 }
+
+/******************************************************************/
+/*CARRUCEL*/
+#contenedor{
+    margin-top: 50px;
+}
+  
+.slide{
+  margin-top: 50px;
+
+}
+.slide{
+    height: 10px;
+ 
+}
+/*h1{
+    margin-top: 50px;
+    text-align: center;
+    color: darkkhaki;
+}
+#cuerpo{
+    background-color: crimson;
+}
+p{
+    color: rgb(255, 255, 255);
+}*/

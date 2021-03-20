@@ -15,6 +15,15 @@
     
     <br>
     <hr>
+    <div id="enlaces-sociales">
+    <p>
+        Siguenos en nuestras redes sociales:  
+        <a target="_blank" href="https://www.facebook.com/Importadoramendezsd">Facebook</a> 
+        <a target="_blank" href="https://www.instagram.com/importadoramendez/">Instagram</a>
+    </p>
+    </div>
+    
+    <hr>
     <br>
     <p>SOMOS IMPORTADORA MENDEZ - IMPORTADORES POR EXCELENCIA</p>
 </footer>

@@ -37,27 +37,32 @@ $arreglo = $_SESSION['car'];
 
                 <div id="cajaText">
                     <label for="">Nombres:</label>
-                    <input type="inCiudad">
+                    <input type="text" name="nombre">
                 </div>
 
                 <div id="cajaText">
                     <label for="">Ciudad:</label>
-                    <input type="inCiudad">
+                    <input type="text" name="ciudad">
                 </div>
 
                 <div id="cajaText">
                     <label for="">Direccion:</label>
-                    <input type="inCiudad">
+                    <input type="text" name="direccion">
                 </div>
 
                 <div id="cajaText">
                     <label for="">Correo:</label>
-                    <input type="inCiudad">
+                    <input type="text" name="correo">
                 </div>
 
                 <div id="cajaText">
                     <label for="">Telefono:</label>
-                    <input type="inCiudad">
+                    <input type="text" name="telefono">
+                </div>
+
+                <div id="cajaText">
+                    <label for="">Constrasena:</label>
+                    <input type="password" name="contrasena" >
                 </div>
 
             </form>
@@ -103,6 +108,7 @@ $arreglo = $_SESSION['car'];
     <?php 
      require_once 'src/include/footer.php'
     ?>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
 </body>
 </html>

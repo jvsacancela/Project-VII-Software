@@ -1,4 +1,7 @@
-
+<?php 
+ 
+ 
+?>
 <!--LIBRERIA PARA FUENTES-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <nav id="navegacion">
@@ -9,13 +12,22 @@
        
         <div id="nav-buscar">
             <form action="buscar.php" method="GET">
-            <input id="input-buscar" type="text" placeholder="Buscar..." name="texto"><i class="fa fa-search"></i>
+            <input id="input-buscar" type="text" placeholder="Buscar..." name="texto">
             </form>
         </div>
 
         <div id="nav-compras">
-            <a href="cart.php"><i class="fa fa-shopping-cart" id="cart"></i></a>
-            <div id="contador"><span id="cont"><?php echo 5;?></span></div>
+            <a href="cart2.php"><i class="fa fa-shopping-cart" id="cart"></i></a>
+            <div id="contador"><span id="cont">
+                    <?php
+                        if(isset($_SESSION['car'])){
+                            echo count($_SESSION['car']);
+                        }else{
+                            echo 0;
+                        }
+                    ?>
+                </span>
+            </div>
         </div>
            
     </div>

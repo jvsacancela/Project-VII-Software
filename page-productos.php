@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     require_once 'config/conexion.php';
     require_once 'config/sql_class.php';
 
@@ -37,6 +37,7 @@
     ?>
 
     <div id="contenedor">
+
         <br>
 
         <h4 id="titul"><i class="far fa-caret-square-right"></i> Categoria | <?php echo $cat_id ?></h4>
@@ -60,7 +61,7 @@
                     </h1>
                     <p id='descripcion-producto'><?php echo $display['descripcionProducto'];  ?></p>
                     <h1 id='precio-producto'>$<?php echo number_format($display['precioProducto'], 2, '.', '');  ?></h1>
-                   <button id="btn-add-cart" ><a  id="btn-add-cart" href="cart.php?id=<?php echo $display['codigoProducto']?>">AGREGAR AL CARRITO</a></button>
+                   <button class="btn-add-cart" id="btn-add-cart" ><a class="btn-add-cart" id="btn-add-cart" href="cart.php?id=<?php echo $display['codigoProducto']?>">AGREGAR AL CARRITO</a></button>
                 </div>
             <?php 
                 }}else {
@@ -72,12 +73,13 @@
         </div>
     </div>
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
 </body>
 
+
+    <script src="src/pages/user/js/page-productos.js"></script>
     <?php
         require_once 'src/include/footer.php'
     ?>
-
-    <script src="src/pages/user/js/page-productos.js"></script>
-</html>
+    </html>

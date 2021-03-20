@@ -1,70 +1,11 @@
 <?php
     session_start();
+    $arreglo = $_SESSION['car'];
     require_once 'config/conexion.php';
     require_once 'config/sql_class.php';
 
     $cart_class = new sql_class();
-    $id = $_GET['id'];
 
-   
-
-    if (isset($_SESSION['car'])){
-        $arreglo = $_SESSION['car'];
-        $find=false;
-        $num = 0;
-        for($i=0; $i<count($arreglo); $i++){
-            if($arreglo[$i]['Codigo'] == $id){
-                $find = true;
-                $num = $i;
-            }
-        }
-        if($find == true){
-            $arreglo[$num]['Cantidad']=$arreglo[$num]['Cantidad']+1;
-            $_SESSION['car']=$arreglo;
-            header ('Location: page-productos.php');
-        }else{
-            $nombre = "";
-            $precio = "";
-            $foto = "";
-            $result = $cart_class-> ConsultarIdProducto($id);
-            $fila = mysqli_fetch_row($result);
-            $nombre = $fila[1];
-            $precio = $fila[3];
-            $foto = $fila[7];
-
-            $newArreglo = array(
-                'Codigo' => $id,
-                'Nombre' => $nombre,
-                'Precio' => $precio,
-                'Foto' => $foto,
-                'Cantidad' => 1
-            );
-            array_push($arreglo, $newArreglo);
-            $_SESSION['car'] = $arreglo;
-            header ('Location: page-productos.php');
-        }
-    }else{
-        if(isset($_GET['id'])){
-            $nombre = "";
-            $precio = "";
-            $foto = "";
-            $result = $cart_class-> ConsultarIdProducto($id);
-            $fila = mysqli_fetch_row($result);
-            $nombre = $fila[1];
-            $precio = $fila[3];
-            $foto = $fila[7];
-
-            $arreglo[] = array(
-                'Codigo' => $id,
-                'Nombre' => $nombre,
-                'Precio' => $precio,
-                'Foto' => $foto,
-                'Cantidad' => 1
-            );
-            $_SESSION['car'] = $arreglo;
-            header ('Location: page-productos.php');
-        }
-    }
 
   # header ('Location: page-productos.php');
 
@@ -118,9 +59,9 @@
             <td> <?php echo $arregloCart[$i]['Nombre']; ?> </td>
             <td> $ <?php echo number_format($arregloCart[$i]['Precio'], 2 , '.', ''); ?></td>     
             <td>
-                <button>&minus;</button> 
+                <!--<button>&minus;</button>--> 
                 <input id="txtCant" type="text" value="<?php echo $arregloCart[$i]['Cantidad']; ?>" class="txtCantidad" data-precio="<?php echo $arregloCart[$i]['Precio'];?>" data-id="<?php echo $arregloCart[$i]['Codigo']; ?>">
-                <button>&plus;</button>
+               <!-- <button>&plus;</button>-->
             </td>
             <td class="cant<?php echo $arregloCart[$i]['Codigo'];?>"> 
                 $ <?php echo number_format($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad'], 2, '.', '')?></td>
@@ -130,15 +71,7 @@
     <?php } } ?>
     </tbody>
 
-    <tfoot>
-        <tr>
-           <!-- <th></th>-->
-            <th></th>
-            <th></th>
-            <th>TOTAL A PAGAR</th>
-            <th>$<?php echo number_format($preciott, 2, '.', '') ?></th>
-        </tr>
-    </tfoot>
+   
 </table>
 
 <a href="page-compra.php" id='btn-comprar'>COMPRAR</a>

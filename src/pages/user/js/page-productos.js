@@ -1,7 +1,7 @@
-var save = document.getElementById('btn-add-cart');
+var saveProd = document.getElementById('btn-add-cart');
 
-save.addEventListener('click', saveProduct);
+saveProd.addEventListener('click', saveProduct);
 
-function saveProduct(){
-    alert('Producto guardado')
+function saveProduct(e){
+    console.log('me diste un clic')
 }
